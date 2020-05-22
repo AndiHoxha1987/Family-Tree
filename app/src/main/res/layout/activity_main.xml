@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/father"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father"
+        android:padding="5dp"
+        android:background="@drawable/male"
+        app:layout_constraintBottom_toBottomOf="@id/grand_son"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/mother"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother"
+        android:padding="5dp"
+        android:background="@drawable/female"
+        app:layout_constraintBottom_toBottomOf="@id/grand_daughter"
+        app:layout_constraintLeft_toLeftOf="@id/father"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/line1"
+        android:background="@color/colorAccent"
+        android:layout_height="1dp"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/father"
+        app:layout_constraintRight_toLeftOf="@+id/mother"
+        app:layout_constraintTop_toBottomOf="@+id/father"
+        app:layout_constraintBottom_toTopOf="@+id/father" />
+
+    <TextView
+        android:id="@+id/line2"
+        android:background="@color/colorAccent"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        app:layout_constraintLeft_toRightOf="@id/father"
+        app:layout_constraintRight_toLeftOf="@+id/mother"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintBottom_toTopOf="@+id/line3"
+        />
+
+    <TextView
+        android:id="@+id/line3"
+        android:background="@color/colorAccent"
+        android:layout_height="1dp"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@+id/line6"
+        app:layout_constraintTop_toBottomOf="@+id/father"
+        app:layout_constraintBottom_toTopOf="@+id/son"
+        />
+
+    <TextView
+        android:id="@+id/son"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/son"
+        android:padding="5dp"
+        android:background="@drawable/male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/grand_son"
+        app:layout_constraintRight_toLeftOf="@id/grand_daughter"
+        app:layout_constraintTop_toTopOf="@id/father" />
+
+    <TextView
+        android:id="@+id/line4"
+        android:background="@color/colorAccent"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        app:layout_constraintLeft_toRightOf="@id/son"
+        app:layout_constraintRight_toLeftOf="@+id/son"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toTopOf="@+id/son"
+        />
+
+    <TextView
+        android:id="@+id/grand_son"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grand_son"
+        android:padding="5dp"
+        android:background="@drawable/male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/son"
+        app:layout_constraintTop_toTopOf="@id/father" />
+    <TextView
+        android:id="@+id/line5"
+        android:background="@color/colorAccent"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        app:layout_constraintLeft_toRightOf="@id/grand_son"
+        app:layout_constraintRight_toLeftOf="@+id/grand_son"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toTopOf="@+id/grand_son"
+        />
+
+    <TextView
+        android:id="@+id/daughter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daughter"
+        android:padding="5dp"
+        android:background="@drawable/female"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/grand_daughter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mother" />
+    <TextView
+        android:id="@+id/line6"
+        android:background="@color/colorAccent"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        app:layout_constraintLeft_toRightOf="@id/daughter"
+        app:layout_constraintRight_toLeftOf="@+id/daughter"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toTopOf="@+id/daughter"
+        />
+
+    <TextView
+        android:id="@+id/grand_daughter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grand_daughter"
+        android:padding="5dp"
+        android:background="@drawable/female"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/son"
+        app:layout_constraintRight_toRightOf="@id/daughter"
+        app:layout_constraintTop_toTopOf="@id/mother" />
+    <TextView
+        android:id="@+id/line7"
+        android:background="@color/colorAccent"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        app:layout_constraintLeft_toRightOf="@id/grand_daughter"
+        app:layout_constraintRight_toLeftOf="@+id/grand_daughter"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toTopOf="@+id/grand_daughter"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

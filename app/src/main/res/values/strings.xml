@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Family Tree</string>
+    <string name="grand_daughter">Grand Daughter</string>
+    <string name="daughter">Daughter</string>
+    <string name="grand_son">Grand Son</string>
+    <string name="son">Son</string>
+    <string name="mother">Mother</string>
+    <string name="father">Father</string>
+</resources>
